@@ -1,0 +1,11 @@
+<script type="text/javascript" src="/javascripts/ckeditor/ckeditor.js"></script>
+<script type="text/javascript" src="/javascripts/ckeditor/adapters/jquery.js"></script>
+<script type="text/javascript">
+  window.onload = function()
+  {
+    var ids = [<%= ids.map{|id| "'#{id}'"}.join(', ') %>]
+    $.each(ids, function(index, value) {
+      CKEDITOR.replace(value);
+    });
+  };
+</script>

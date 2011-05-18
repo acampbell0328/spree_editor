@@ -14,5 +14,5 @@ module SpreeEditor
     config.to_prepare &method(:activate).to_proc
   end
 
-  EditorEngines = %w(YUIRichEditor WYMEditor TinyMCE)
+  EditorEngines = %w(YUIRichEditor WYMEditor TinyMCE CKEditor)
 end
