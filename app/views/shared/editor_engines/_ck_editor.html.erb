@@ -5,7 +5,11 @@
   {
     var ids = [<%= ids.map{|id| "'#{id}'"}.join(', ') %>]
     $.each(ids, function(index, value) {
-      CKEDITOR.replace(value);
+      CKEDITOR.replace(value,
+      {
+        filebrowserUploadUrl : '/content_files',
+        filebrowserImageUploadUrl : '/content_images'
+      });
     });
   };
 </script>
